@@ -3,7 +3,9 @@ var packageBody,ground
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;
 const Body = Matter.Body;
+var engine,world;
 
 function preload()
 {
@@ -12,6 +14,11 @@ function preload()
 
 function setup() {
 	createCanvas(800, 700);
+  
+  engine = Engine.create();
+  world = engine.world;
+
+  roof1 = new roof (300,200,400,40);
 
   bob1 = new bob (50,300,30);
   bob2 = new bob (100,300,30);
@@ -23,7 +30,8 @@ function setup() {
   rope2 = new Chain (bob2.body,roof1.body,bobDiameter*2,0);
   rope3 = new Chain (bob3.body,roof1.body,bobDiameter*2,0);
   rope4 = new Chain (bob4.body,roof1.body,bobDiameter*2,0);
-  rope5 = new Chain (bob5.body,roof1.body,bobDiameter*2,0);
+  rope5 = new Chain (bob5.body,roof1.body,bobDiameter*2,0); 
+  
 
 	engine = Engine.create();
 	world = engine.world;
@@ -32,9 +40,7 @@ function setup() {
 	//World.add(world, packageBody);
 	
 
-	//Create a Ground
-	roof = Bodies.rectangle(200,50, width, 10 , {isStatic:true} );
- 	//World.add(world,roof);
+
 
 
 	Engine.run(engine);
@@ -44,7 +50,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0); 
+  background("#FFFF34"); 
 
   Engine.update(engine);
   
@@ -60,6 +66,7 @@ function draw() {
   rope4.display();
   rope5.display();
 
+  roof1.display();
   drawSprites();
  
 }
