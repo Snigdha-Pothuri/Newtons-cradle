@@ -18,23 +18,23 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  roof1 = new roof (300,200,400,40);
+  roof1 = new roof (200,200,300,40);
 
   bob1 = new bob (50,300,30);
-  bob2 = new bob (100,300,30);
+ bob2 = new bob (100,300,30);
   bob3 = new bob (150,300,30);
   bob4 = new bob (200,300,30);
   bob5 = new bob (250,300,30); 
   bobDiameter=40; 
-  rope1 = new Chain (bob1.body,roof1.body,bobDiameter*2,0);
-  rope2 = new Chain (bob2.body,roof1.body,bobDiameter*2,0);
-  rope3 = new Chain (bob3.body,roof1.body,bobDiameter*2,0);
-  rope4 = new Chain (bob4.body,roof1.body,bobDiameter*2,0);
-  rope5 = new Chain (bob5.body,roof1.body,bobDiameter*2,0); 
+  rope1 = new Chain (bob1.body,roof1.body,bobDiameter*-1,0);
+  rope2 = new Chain (bob2.body,roof1.body,bobDiameter*-2,0);
+  rope3 = new Chain (bob3.body,roof1.body,bobDiameter*0,0);
+  rope4 = new Chain (bob4.body,roof1.body,bobDiameter*3,0);
+  rope5 = new Chain (bob5.body,roof1.body,bobDiameter*-3,0); 
   
 
-	engine = Engine.create();
-	world = engine.world;
+	//engine = Engine.create();
+	//world = engine.world;
 
 	//packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1.5, isStatic:false});
 	//World.add(world, packageBody);
