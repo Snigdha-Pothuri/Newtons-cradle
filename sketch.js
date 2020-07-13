@@ -26,11 +26,11 @@ function setup() {
   bob4 = new bob (200,300,30);
   bob5 = new bob (250,300,30); 
   bobDiameter=40; 
-  rope1 = new Chain (bob1.body,roof1.body,bobDiameter*-1,0);
-  rope2 = new Chain (bob2.body,roof1.body,bobDiameter*-2,0);
-  rope3 = new Chain (bob3.body,roof1.body,bobDiameter*0,0);
-  rope4 = new Chain (bob4.body,roof1.body,bobDiameter*3,0);
-  rope5 = new Chain (bob5.body,roof1.body,bobDiameter*-3,0); 
+  rope1 = new Chain (bob1.body,roof1.body,-bobDiameter*2,0);
+  rope2 = new Chain (bob2.body,roof1.body,-bobDiameter*1,0);
+  rope3 = new Chain (bob3.body,roof1.body,0,0);
+  rope4 = new Chain (bob4.body,roof1.body,bobDiameter*1,0);
+  rope5 = new Chain (bob5.body,roof1.body,bobDiameter*2,0); 
   
 
 	//engine = Engine.create();
